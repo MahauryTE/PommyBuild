@@ -1,0 +1,20 @@
+{
+  "name": "pommy_build",
+  "version": "1.0.0",
+  "description": "An Electron App with the use of the Genshin API",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Pommy",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^13.1.8",
+    "electron-store": "^8.0.0",
+    "net": "^1.0.2",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}
