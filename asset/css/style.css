@@ -1,0 +1,41 @@
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+}
+.content {
+    height: 350px;
+    width: 290px;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
+    border : 0;
+}
+.card {
+    display: inline-block;
+    margin :40px;
+    background : black top center no-repeat;
+    transition: background 0.8s;
+    overflow: hidden;
+    box-shadow: 0 70px 63px -60px #000;
+    background-size: auto 400px ;
+    border: 0;
+}
+.card:hover {
+    background: white top center no-repeat;
+
+    background-size: auto 800px;
+}
+.card:hover h2 {
+    opacity: 1;
+}
+
+h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: black;
+    margin: 30px;
+    opacity: 0;
+    transition: opacity 1s;
+}

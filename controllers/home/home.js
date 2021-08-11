@@ -11,18 +11,13 @@ function generateCards(characters) {
     characters.forEach(character => {
         //Creation of the HTML of a card with information of the character
         let content = `
-                            <div class="content">
-                                <p hidden>${character.id}</p>
-                                <h2>${character.name}</h2>
-                                <p>${character.vision}</p>
-                                <p>${character.weapon}</p>
-                                <p>${character.nation}</p>
-                                <p>${character.constellation}</p>
-                                <p>${character.rarity} étoiles</p>
-                            </div>`
+        <div class="content">
+            <h2>${character.name}</h2>
+        </div>`
 
         let card = document.createElement('div');
-        card.classList.add('card');
+        card.style.backgroundImage = `url("https://api.genshin.dev/characters/${character.nameId}/portrait")`
+        card.classList.add('card', "col-lg-3");
 
         //Put the content in the div card
         card.innerHTML = content;

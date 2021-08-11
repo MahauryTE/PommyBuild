@@ -6,11 +6,12 @@ const {electron, app, BrowserWindow, ipcMain, dialog,} = require("electron"),
 //Call of json which stock the data
 const store = new Store();
 
-store.clear();
+//store.clear();
 
 let characters = store.get('characters');
 
-//If there are no data in the json file, we create default data
+//If there are not character in the app, we fill the characters list with the help of the module request and promise for interact with the API,
+//to make it simple we get all information from the internet that we store properly for use it later
 if (!characters || characters.length === 0) {
     characters = [];
 
@@ -25,6 +26,7 @@ if (!characters || characters.length === 0) {
                 options.uri = `https://api.genshin.dev/characters/${name}`;
                 request(options)
                     .then(function (data) {
+                        data.nameId = name;
                         characters.push(data);
                         console.log(data);
                     });
